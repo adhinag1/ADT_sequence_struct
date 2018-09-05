@@ -1,13 +1,13 @@
 FLAG= -g -std=gnu11 -w
 
-all: program5.c data.h list.c list.h vector.c vector.h profile.c profile.h
-	gcc $(FLAG) program5.c -o program5
+all: main.c data.h list.c list.h vector.c vector.h profile.c profile.h
+	gcc $(FLAG) main.c -o main
 
 run: all
-	./program5
+	./main
 
 checkmem: all
-	valgrind ./program5
+	valgrind ./main
 
 clean:
-	rm program5
+	rm main
